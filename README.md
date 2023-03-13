@@ -1,5 +1,14 @@
 # My Lean Guide
 
+
+## Universes
+Apparently there's a difference between the two
+```
+variables {A B : Type}
+variables A B : Type
+```
+I don't know what it is because `#check` seems to give the same results. But the former works while the latter doesn't (for my pair definition)
+
 ## Debugging
 Use `eval`, `check`, `print`, `reduce`. One can also put `@` before the term
 

@@ -1,6 +1,5 @@
 prelude 
 
-
 universe l
 inductive poo : Sort l
 | zero : poo
@@ -107,9 +106,10 @@ variables {p : myprod A B}
 def p1 : A → B → A := (λ a b, a)
 #check myprod.rec p1 
 
+variables {c : C}
 variables {cc : Type*}
 #check @myprod.rec_on A B (λ _, C) p (λ _ _, c)
-#reduce @myprod.rec_on A B (λ _, C) p (λ _ _, c)
+#reduce @myprod.rec_on A B (λ _, C) p ((λ _ _, ccc): )
 #reduce @myprod.rec_on A B (λ _, C) p (λ _ _, )
 
 def idk : (Π (a : A) (b : B), myprod A B) := (λ a b, myprod.make a b)

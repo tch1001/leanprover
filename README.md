@@ -1,5 +1,17 @@
 # My Lean Guide
 
+## Inductive
+Inductive is a way of constructing a type. It is basically `A : Type` on massive steroids.
+- It can be a dependent type
+```
+inductive A (other: Other)
+```
+- It provides a way of constructing elements of that type
+```
+inductive A 
+| idk : nat → nat → A
+```
+In the example above, the type `A` has one way of constructing it: by providing two natural numbers.
 
 ## Universes
 Apparently there's a difference between the two
